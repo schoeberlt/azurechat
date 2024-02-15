@@ -321,7 +321,7 @@ export const EmbedDocuments = async (
   try {
     const openai = OpenAIEmbeddingInstance();
 
-    const contentsToEmbed = documents.map((d) => d.pageContent);
+    const contentsToEmbed = documents.map((d) => d.content);
 
     const embeddings = await openai.embeddings.create({
       input: contentsToEmbed,
