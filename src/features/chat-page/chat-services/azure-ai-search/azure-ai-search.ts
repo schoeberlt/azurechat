@@ -146,7 +146,7 @@ export const ExtensionSimilaritySearch = async (props: {
         queries: [
           {
             vector: embeddings.data[0].embedding,
-            fields: vectors,
+            fields: ["content_vector"],
             kind: "vector",
             kNearestNeighborsCount: 10,
           },
