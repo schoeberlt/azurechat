@@ -177,7 +177,7 @@ export const ExtensionSimilaritySearch = async (props: {
 
       results.push({
         score: result.score,
-        document: newDocument, // Use the newDocument object instead of the original document
+        document: result.document, // Use the newDocument object instead of the original document
       });
     }
 
