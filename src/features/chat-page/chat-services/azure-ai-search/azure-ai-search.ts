@@ -17,7 +17,7 @@ import {
 
 export interface AzureSearchDocumentIndex {
   id: string;
-  pageContent: string;
+  content: string;
   embedding?: number[];
   user: string;
   chatThreadId: string;
@@ -210,7 +210,7 @@ export const IndexDocuments = async (
         id: uniqueId(),
         chatThreadId,
         user: await userHashedId(),
-        pageContent: doc,
+        content: doc,
         metadata: fileName,
         embedding: [],
       };
